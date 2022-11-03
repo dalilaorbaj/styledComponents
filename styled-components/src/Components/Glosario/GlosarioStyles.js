@@ -16,6 +16,3 @@ ${props => props.primary && css`
 `}
 `
 
-function Button() {
-    return <StyledButton> Login </StyledButton>;
-}
