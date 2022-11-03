@@ -1,18 +1,16 @@
-import styled, { css } from 'styled-components'
+import React from 'react';
+import GlosarioItem from '../GlosarioItem/GlosarioItem';
+import Data from '../../Data';
 
-const Button = styled.a`
-display: inline-block;
-border-radius: 3px;
-padding: 0.5rem 0;
-margin: 0.5rem 1rem;
-width: 11rem;
-background: transparent;
-color: white;
-border: 2px solid white;
+const GlosarioStyles = () => {
+  return (
+    <>
+      {Data.map((item) => (
+        <GlosarioItem data={item} key={item.id} />
+      )
+      )}
+    </>
+  )
+}
 
-${props => props.primary && css`
-  background: white;
-  color: black;
-`}
-`
-
+export default GlosarioStyles;
